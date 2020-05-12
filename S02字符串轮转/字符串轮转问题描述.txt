@@ -1,0 +1,27 @@
+﻿难度: 简单
+
+Url: https://leetcode-cn.com/problems/string-rotation-lcci/
+
+字符串轮转: 给定两个字符串s1和s2，请编写代码检查s2是否为s1旋转而成（比如，waterbottle是erbottlewat旋转后的字符串）。
+
+示例1:
+    输入：s1 = "waterbottle", s2 = "erbottlewat"
+    输出：True
+
+示例2:
+    输入：s1 = "aa", "aba"
+    输出：False
+
+提示: 字符串长度在[0, 100000]范围内。
+说明: 你能只调用一次检查子串的方法吗？
+
+提示1:
+    如果一个字符串是另一个字符串的旋转，那么它就是在某个特定点上的旋转。
+    例如，字符串waterbottle在3处的旋转意味着在第三个字符处切割waterbottle，并在左半部分（wat）之前放置右半部分（erbottle）。
+
+提示2:
+    本质上，我们是在寻找是否有一种方式可以把第一个字符串分成两部分，即x和y，如此一来，第一个字符串就是xy，第二个字符串就是yx。
+    例如，x = wat，y = erbottle。
+    那么，第一个字符串xy = waterbottle，第二个字符串yx = erbottlewat。
+
+提示3: 想想前面的提示。再想想当你将erbottlewat与它本身连接会发生什么。你得到了erbottlewaterbottlewat。
