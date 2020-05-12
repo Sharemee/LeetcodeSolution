@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S05面试题_17_16_按摩�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S06回文数", "S06回文数\S06回文数.csproj", "{4FEDC7C7-33E1-4FC6-9408-D3856F91CCCC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S07合并两个有序链表", "S07合并两个有序链表\S07合并两个有序链表.csproj", "{BFB47495-DC93-47B0-89B1-4E4BBB009FDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{4FEDC7C7-33E1-4FC6-9408-D3856F91CCCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FEDC7C7-33E1-4FC6-9408-D3856F91CCCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FEDC7C7-33E1-4FC6-9408-D3856F91CCCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFB47495-DC93-47B0-89B1-4E4BBB009FDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFB47495-DC93-47B0-89B1-4E4BBB009FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFB47495-DC93-47B0-89B1-4E4BBB009FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFB47495-DC93-47B0-89B1-4E4BBB009FDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

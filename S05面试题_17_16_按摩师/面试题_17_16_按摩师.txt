@@ -1,6 +1,4 @@
-﻿难度: 简单
-
-标签: 动态规划
+﻿标签: 动态规划
 
 Url: https://leetcode-cn.com/problems/the-masseuse-lcci/
 
