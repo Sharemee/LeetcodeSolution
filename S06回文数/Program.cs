@@ -43,23 +43,7 @@ namespace S06回文数
 
         public bool IsPalindrome2(int x)
         {
-            bool res = true;
-            string tem = x.ToString();
-            string left = tem.Substring(0, tem.Length / 2);
-            string right = (tem.Length % 2 != 0) ? tem.Substring(tem.Length / 2 + 1) : tem.Substring(tem.Length / 2);
-            int i = 0;
-            int ii = left.Length - 1;
-            while (i < right.Length)
-            {
-                if (left[i] != right[ii])
-                {
-                    res = false;
-                    break;
-                }
-                i++;
-                ii--;
-            }
-            return res;
+            return false;
         }
 
     }
