@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S06回文数", "S06回文�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S07合并两个有序链表", "S07合并两个有序链表\S07合并两个有序链表.csproj", "{BFB47495-DC93-47B0-89B1-4E4BBB009FDD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S08有效的括号", "S08有效的括号\S08有效的括号.csproj", "{963D37E4-FD2A-4199-95B2-8B5361A64690}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{BFB47495-DC93-47B0-89B1-4E4BBB009FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFB47495-DC93-47B0-89B1-4E4BBB009FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFB47495-DC93-47B0-89B1-4E4BBB009FDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{963D37E4-FD2A-4199-95B2-8B5361A64690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{963D37E4-FD2A-4199-95B2-8B5361A64690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{963D37E4-FD2A-4199-95B2-8B5361A64690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{963D37E4-FD2A-4199-95B2-8B5361A64690}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
