@@ -1,34 +1,38 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Threading;
 
 namespace S07合并两个有序链表
 {
     class Program
     {
+        const int MAX = 10000;
         private static ListNode res = null;
 
         private static void Main(string[] args)
         {
-            int[] array1 = new int[] { 1, 2, 4 };
-            int[] array2 = new int[] { 1, 3, 4 };
+            Console.Title = "合并两个有序链表";
 
             //初始化链表
-            ListNode l1 = InitListNode(array1, 0);
+            ListNode l1 = InitListNode(ArryList(), 0);
             PrintListNode(l1);
-            ListNode l2 = InitListNode(array2, 0);
+            ListNode l2 = InitListNode(ArryList(), 0);
             PrintListNode(l2);
-
+            Console.WriteLine("=======================");
             Solution solution = new Solution();
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
             ListNode result = solution.MergeTwoLists(l1, l2);
+            Thread.Sleep(1);
+            sw.Stop();
+            Console.WriteLine("链表合并结果: ");
             PrintListNode(result);
+            Console.WriteLine("检查计算结果: " + CheckResult(result, out int count)+" "+ count);
+            Console.WriteLine("运算时间: " + sw.ElapsedMilliseconds);
+
             Console.ReadKey();
         }
 
-        /// <summary>
-        /// 数组初始化链表
-        /// </summary>
-        /// <param name="arry">数组</param>
-        /// <param name="index">当前索引</param>
-        /// <returns></returns>
         private static ListNode InitListNode(int[] arry, int index)
         {
             ListNode tem = null;
@@ -52,12 +56,67 @@ namespace S07合并两个有序链表
 
         private static void PrintListNode(ListNode list)
         {
+            int l = 1;
             while (list != null)
             {
-                Console.Write($"{list.val} ");
-                list = list.next;
+                if (l > 15)
+                {
+                    Console.Write(".....");
+                    break;
+                }
+                else
+                {
+                    Console.Write($"{list.val} ");
+                    l++;
+                    list = list.next;
+                }
             }
             Console.WriteLine();
+        }
+
+        private static int[] ArryList()
+        {
+            int length = 0;
+            Random rd = new Random();
+            length = rd.Next(0, MAX/10);
+            Console.WriteLine("正在生成数组数据....数组长度: " + length);
+
+            int[] arry = new int[length];
+            for (int i = 0; i < length; i++)
+            {
+                Thread.Sleep(10);
+                arry[i] = rd.Next(-MAX, MAX);
+            }
+
+            for (int i = 0; i < length; i++)
+            {
+                for (int j = 0; j < length - i - 1; j++)
+                {
+                    if (arry[j] > arry[j + 1])
+                    {
+                        arry[j] = arry[j] ^ arry[j + 1];
+                        arry[j + 1] = arry[j] ^ arry[j + 1];
+                        arry[j] = arry[j] ^ arry[j + 1];
+                    }
+                }
+            }
+
+            return arry;
+        }
+
+        private static bool CheckResult(ListNode list, out int count)
+        {
+            count = 0;
+            if (list is null) return true;
+
+            count = 1;
+            int tem = list.val;
+            while (list.next != null)
+            {
+                list = list.next; count++;
+                if (tem > list.val) return false;
+            }
+            return true;
         }
     }
 
@@ -79,18 +138,10 @@ namespace S07合并两个有序链表
         }
     }
 
-    /// <summary>
-    /// 链表结构
-    /// </summary>
     public class ListNode
     {
         public int val;
-
         public ListNode next;
-
-        public ListNode(int x)
-        {
-            val = x;
-        }
+        public ListNode(int x) => val = x;
     }
 }
